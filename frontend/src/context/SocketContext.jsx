@@ -4,7 +4,7 @@ const SocketContext = createContext(null);
 export function SocketProvider({ children }) {
   const [socket, setSocket] = useState(null);
   useEffect(() => {
-    const s = io('http://localhost:5000', { transports: ['websocket', 'polling'] });
+    const s = io('https://expert-booking-system-28hk.onrender.com', { transports: ['websocket', 'polling'] });
     setSocket(s);
     return () => s.disconnect();
   }, []);
