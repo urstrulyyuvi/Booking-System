@@ -1,5 +1,7 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: '/api' });
+const API = axios.create({
+  baseURL: 'https://expert-booking-system-28hk.onrender.com/api'
+});
 export const getExperts = (params) => API.get('/experts', { params });
 export const getExpertById = (id) => API.get(`/experts/${id}`);
 export const createBooking = (data) => API.post('/bookings', data);
